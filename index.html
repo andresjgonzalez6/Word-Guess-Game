@@ -11,7 +11,7 @@
 
 <body>
 
-        <h1>Psychic Game</h1>
+        <h1>The Psychic Game</h1>
         <p>Guess what letter I am thinking of.</p>
 
     <div id="game">
@@ -55,7 +55,7 @@
                 guesses = 9;
                 reset();
 
-            } else if ((guesses < 1)) { //If guesses are all used up. Loss. 
+            } else if ((guesses < 2)) { //If guesses are all used up. Loss. 
                 losses++;
                 guesses = 9;
                 reset();
@@ -75,7 +75,7 @@
             // Set the inner HTML contents of the #game div to our html string
             document.querySelector("#game").innerHTML = html;
         };
-        
+
     </script>
 
 </body>
