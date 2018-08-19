@@ -34,10 +34,13 @@
         var wins = 0;
         var losses = 0;
         var guesses = 9;
+        var guessArray = [];
         var reset = function () {
             guesses = 9;
+            guessArray = [];
             game();
         }
+       
 
 // This is the start of the website/JavaScript/game. Running the random generator when the web site opens. 
 
@@ -48,7 +51,9 @@
 
             // Determines which key was pressed.
             var userGuess = event.key;
-
+            guessArray.push(userGuess);
+           
+            
             // This is the game logic, outputs depending on user keys pressed. 
             if ((userGuess === computerGuess)) { //If user guesses correctly. 
                 wins++;
@@ -69,7 +74,7 @@
                  "<p>Wins: " + wins + "</p>" + 
                  "<p>Losses: " + losses + "</p>" +  
                  "<p>Guesses Left: " + guesses + "</p>" + 
-                 "<p>Your Guesses so far: " + userGuess + "</p>" + 
+                 "<p>Your Guesses so far: " + guessArray + "</p>" + 
                  "<p>The computer chose: " + computerGuess + "</p>";
 
             // Set the inner HTML contents of the #game div to our html string
