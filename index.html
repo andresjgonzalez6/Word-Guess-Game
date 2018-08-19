@@ -39,12 +39,15 @@
             guesses = 9;
             guessArray = [];
             game();
+            console.log(computerGuess);
         }
        
 
 // This is the start of the website/JavaScript/game. Running the random generator when the web site opens. 
 
-       computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]
+       computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+       console.log(computerGuess);
 
         // This function is run whenever the user presses a key, which is the entire game engine. 
         document.onkeyup = function (event) {
@@ -74,8 +77,8 @@
                  "<p>Wins: " + wins + "</p>" + 
                  "<p>Losses: " + losses + "</p>" +  
                  "<p>Guesses Left: " + guesses + "</p>" + 
-                 "<p>Your Guesses so far: " + guessArray + "</p>" + 
-                 "<p>The computer chose: " + computerGuess + "</p>";
+                 "<p>Your Guesses so far: " + guessArray + "</p>"; // + // 
+                 //"<p>The computer chose: " + computerGuess + "</p>"; //
 
             // Set the inner HTML contents of the #game div to our html string
             document.querySelector("#game").innerHTML = html;
